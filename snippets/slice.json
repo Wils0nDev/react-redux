@@ -1,0 +1,34 @@
+{
+
+	"create slice Redux": {
+		"prefix": "redux-slice",
+		"body": [
+
+			"import { createSlice } from '@reduxjs/toolkit'",
+			"",
+			"const initialState = {",
+			"  counter: 10,",
+			"  times:0",
+			"}",
+			"",
+			"export const  ${1:template}Slice = createSlice({",
+			"  name: 'name',",
+			"  initialState,",
+			"  reducers: {",
+			"   increment: (state) => {",
+			"     state.counter += 1",
+			"   },",
+			"   decrement : (state)=> { ",
+			"     state.counter -= 1",
+			"   },",
+			"   incrementbydos : (state,action)=> { ",
+			"     state.counter += action.payload",
+			"   }",
+			"  },",
+			"})",
+			"",
+			"export const { increment,decrement,incrementbydos  } =  ${1:template}Slice.actions",
+		],
+		"description": "create slice Redux"
+	}
+}
